@@ -1,36 +1,9 @@
+/**
+ * <tree>
+ * Requires proctree.js https://github.com/supereggbert/proctree.js/
+ * Tree parameters can be generated at http://snappytree.com
+ */
 room.registerElement('tree', {
-/*
-  init() {
-      this.defineProperties({
-        'tree.textures.trunk': { type: 'string', default: 'tree.trunk1' },
-        'tree.textures.leaves': { type: 'string', default: 'tree.leaves1' },
-
-        'tree.seed': { type: 'integer' },
-        'tree.segments': { type: 'integer', default: 6 },
-        'tree.levels': { type: 'integer', default: 5 },
-
-        'tree.vMultiplier': { type: 'float', default: 2.36 },
-        'tree.twigScale': { type: 'float', default: 0.39 },
-        'tree.initialBranchLength': { type: 'float', default: 0.49 },
-        'tree.lengthFalloffFactor': { type: 'float', default: 0.85 },
-        'tree.lengthFalloffPower': { type: 'float', default: 0.99 },
-
-        'tree.clumpMax': { type: 'float', default: 0.454 },
-        'tree.clumpMin': { type: 'float', default: 0.404 },
-        'tree.branchFactor': { type: 'float', default: 2.45 },
-        'tree.dropAmount': { type: 'float', default: -0.1 },
-        'tree.growAmount': { type: 'float', default: 0.235 },
-        'tree.sweepAmount': { type: 'float', default: 0.01 },
-        'tree.maxRadius': { type: 'float', default: 0.139 },
-        'tree.climbRate': { type: 'float', default: 0.371 },
-        'tree.trunkKink': { type: 'float', default: 0.093 },
-        'tree.treeSteps': { type: 'float', default: 5 },
-        'tree.taperRate': { type: 'float', default: 0.947 },
-        'tree.radiusFalloffRate': { type: 'float', default: 0.73 },
-        'tree.twistRate': { type: 'float', default: 3.02 },
-        'tree.trunkLength': { type: 'float', default: 2.4 }
-      });
-*/
   'trunkMaterial': 'tree_trunk1',
   'twigMaterial': 'tree_leaves1',
   'seed': Math.random() * 100000,
