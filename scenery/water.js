@@ -1,8 +1,10 @@
 room.registerElement('water', {
+  sizex: 1000,
+  sizey: 1000,
   create() {
     let watertex = this.getAsset('image', 'water');
     elation.events.add(watertex, 'asset_load', (ev) => {
-      let water = new THREE.Water(new THREE.PlaneBufferGeometry(100, 100), {
+      let water = new THREE.Water(new THREE.PlaneBufferGeometry(this.sizex, this.sizey), {
         textureWidth: 512,
         textureHeight: 512,
         waterNormals: watertex.getInstance(),
