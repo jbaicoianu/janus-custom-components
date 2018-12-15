@@ -1,27 +1,27 @@
 # Media
 
-#### audiosystem
+## audiosystem
 
 
-#### book
+## book
 
 
-#### mediaplayer
+## mediaplayer
 
 This component isn't used directly, it's the base class for projector, cassetteplayer, etc. It's a great example of extended components where you write one base class which defines all interaction behavior, then you extend it for the specific uses.
 
-#### msf
+## msf
 [View example](https://vesta.janusvr.com/bai/anarchy-arcade-test)
 
 ```
 <aacabinet cabinet_id="arcademachine" controlpanel_part_name="cabinet-front" js_id="supersmashland" marquee_part_name="cabinet-marquee" msf='{"title":"SuperSmashLand","file":"SuperSmashLand.exe","screen":"http://www.supersmashland.com/imgs/screenshot1.png","marquee":"https://i.ytimg.com/vi/KVROb_FPZCc/maxresdefault.jpg","preview":"https://www.youtube.com/watch?v=351CO5_8fbM","download":"http://www.supersmashland.com/","reference":"http://en.wikipedia.org/wiki/Super_Smash_Land","description":"Super Smash Land is a demake of Super Smash Bros. released in September 14, 2011 by Dan Fornace. The game features 6 playable characters and 11 stages. The game visual design resembles the graphics from the Nintendo Game Boy. The game was developed with GameMaker 7.","keywords":"retro, nintendo","type":"pc"}' pos="0 0 -2" scale="1.25 1.25 1.25" screen_part_name="screen"/>
 ```
 
-#### presentation
+## presentation
 
 
 
-#### projector
+## projector
 
 ```
 <AssetObject id="projector" src="http://assets.metacade.com/archive/models/projector/projector.dae" />
@@ -40,7 +40,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 </Object>
 ```
 
-#### recordplayer
+## recordplayer
 
 ```
 <AssetObject id="table" src="http://assets.metacade.com/archive/models/table/RageTable.obj" />
@@ -54,7 +54,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 </Object>
 ```
 
-#### search
+## search
 [View Example](http://assets.metacade.com/internetarchive/)
 
 ```
@@ -66,7 +66,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 <ArchiveCollection collectionname="prelinger" itemtype="archive_film" pos="-.2 .95 0" rotation="0 -45 0" />
 ```
 
-#### stereosystem
+## stereosystem
 
 ```
 <AssetObject id="boombox" src="https://vesta.janusvr.com/files/bepis/obj/boombox/scene.gltf" />
@@ -85,7 +85,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 </Object>
 ```
 
-#### videoscreen
+## videoscreen
 [View Example](https://vesta.janusvr.com/bepis/cinema)
 
 ```
@@ -95,7 +95,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 ```
 
 
-#### viewer
+## viewer
 
 ```
 <Viewer js_id="viewer" />
