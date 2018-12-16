@@ -22,6 +22,19 @@
 
 ## [instancedobject](https://github.com/madjin/janus-custom-components/blob/master/utils/instancedobject/instancedobject.js)
 
+![Preview](https://i.imgur.com/ESWkWxe.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/instancing-test)
+
+```
+<AssetObject id="milktruck" src="https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/CesiumMilkTruck/glTF/CesiumMilkTruck.gltf"/>
+
+
+<InstancedObject model_id="milktruck" pos="0 0 0">
+ <Instance pos="-40 0 -40"/>
+ <Instance pos="-36 0 -36"/>
+</InstancedObject>
+```
 
 ## [layout](https://github.com/madjin/janus-custom-components/blob/master/utils/layout/layout.js)
 
@@ -69,6 +82,8 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 
 ## [showcase](https://github.com/madjin/janus-custom-components/blob/master/utils/showcase/showcase.js)
 
+![Preview](https://i.imgur.com/KRoeUQQ.jpg)
+
 [![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bepis/vrchat-hub)
 
 ```
@@ -83,6 +98,8 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 
 ## [speechtext](https://github.com/madjin/janus-custom-components/blob/master/utils/speechtext/speechtext.js)
 
+![Preview](https://i.imgur.com/lfDOUq8.jpg)
+
 [![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/speechtext-test)
 
 ```
@@ -93,6 +110,8 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 ```
 
 ## [teleporter](https://github.com/madjin/janus-custom-components/blob/master/utils/teleporter/teleporter.js)
+
+![Preview](https://i.imgur.com/FV4aO4u.gif)
 
 ```
 <Teleporter col="#4cb96f" external="true" js_id="test" logo_scale="3.3 3 1" pos="-20 1.4 15.1" url="hifi://maker" xdir="0 0 -1" zdir="1 1 0"/>
