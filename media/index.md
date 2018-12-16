@@ -72,7 +72,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 
 ## [search](https://github.com/madjin/janus-custom-components/blob/master/media/search/search.js)
 
-[View Example](http://assets.metacade.com/internetarchive/)
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](http://assets.metacade.com/internetarchive/)
 
 ![Preview](https://i.imgur.com/nv8EUM9.jpg)
 
@@ -108,7 +108,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 
 ## [videoscreen](https://github.com/madjin/janus-custom-components/blob/master/media/videoscreen/videoscreen.js)
 
-[View Example](https://vesta.janusvr.com/bepis/cinema)
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bepis/cinema)
 
 ![Preview](https://i.imgur.com/USa1ELw.jpg)
 
