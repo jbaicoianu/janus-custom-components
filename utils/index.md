@@ -18,8 +18,12 @@
 </bulletedlist>
 ```
 
+***
+
 ## [impostergroup](https://github.com/madjin/janus-custom-components/blob/master/utils/impostergroup/impostergroup.js)
 
+
+***
 
 ## [instancedobject](https://github.com/madjin/janus-custom-components/blob/master/utils/instancedobject/instancedobject.js)
 
@@ -36,6 +40,8 @@
  <Instance pos="-36 0 -36"/>
 </InstancedObject>
 ```
+
+***
 
 ## [layout](https://github.com/madjin/janus-custom-components/blob/master/utils/layout/layout.js)
 
@@ -73,8 +79,12 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 </VerticalLayout>
 ```
 
+***
+
 ## [objectfader](https://github.com/madjin/janus-custom-components/blob/master/utils/objectfader/objectfader.js)
 
+
+***
 
 ## [objectpool](https://github.com/madjin/janus-custom-components/blob/master/utils/objectpool/objectpool.js)
 
@@ -82,11 +92,15 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 <objectpool count="4" objecttype="particle" js_id="explosionfactory" />
 ```
 
+***
+
 ## [pushbutton](https://github.com/madjin/janus-custom-components/blob/master/utils/pushbutton/pushbutton.js)
 
 ![Preview](https://imgur.com/hxu1GKo.gif)
 
 [![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/guide/streetlight)
+
+***
 
 ## [showcase](https://github.com/madjin/janus-custom-components/blob/master/utils/showcase/showcase.js)
 
@@ -98,6 +112,8 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 <Showcase col="#ef2d5e" id="aframe" link_external="true" logo_url="https://aframe.io/aframe-school/media/img/aframe-logo.png" pos="-5.1 0.1 9.8" thumb_url="http://i.imgur.com/EHlQMRN.png" url="https://networked-aframe.glitch.me/" xdir="-1 0 0" zdir="0 0 -1"/>
 ```
 
+***
+
 ## [slider](https://github.com/madjin/janus-custom-components/blob/master/utils/slider/slider.js)
 
 ![Preview](https://imgur.com/LUFicrn.gif)
@@ -107,6 +123,8 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 ```
 <Slider max="15" min="0" onchange="room.objects['mylamp'].setBrightness(this.value)" pos=".2 0 .5" value="8"/>
 ```
+
+***
 
 ## [speechtext](https://github.com/madjin/janus-custom-components/blob/master/utils/speechtext/speechtext.js)
 
@@ -120,6 +138,8 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 
 <SpeechText pos="0 1 -5"/>
 ```
+
+***
 
 ## [teleporter](https://github.com/madjin/janus-custom-components/blob/master/utils/teleporter/teleporter.js)
 

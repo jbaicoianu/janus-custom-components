@@ -15,9 +15,12 @@ With audiosystem, you can take an audio source and drop it onto the scene and cr
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=2zDDcD0Xwpk" target="_blank"><img src="http://img.youtube.com/vi/2zDDcD0Xwpk/0.jpg" alt="IMAGE ALT TEXT HERE" width="846" height="468" /></a>
 
+***
 
 ## [book](https://github.com/madjin/janus-custom-components/blob/master/media/book/book.js)
 
+
+***
 
 ## [msf](https://github.com/madjin/janus-custom-components/blob/master/media/msf/aarcade.js)
 
@@ -33,14 +36,19 @@ Read more here: <https://github.com/smsithlord/MetaShortcutFormat>
 <aacabinet cabinet_id="arcademachine" controlpanel_part_name="cabinet-front" js_id="supersmashland" marquee_part_name="cabinet-marquee" msf='{"title":"SuperSmashLand","file":"SuperSmashLand.exe","screen":"http://www.supersmashland.com/imgs/screenshot1.png","marquee":"https://i.ytimg.com/vi/KVROb_FPZCc/maxresdefault.jpg","preview":"https://www.youtube.com/watch?v=351CO5_8fbM","download":"http://www.supersmashland.com/","reference":"http://en.wikipedia.org/wiki/Super_Smash_Land","description":"Super Smash Land is a demake of Super Smash Bros. released in September 14, 2011 by Dan Fornace. The game features 6 playable characters and 11 stages. The game visual design resembles the graphics from the Nintendo Game Boy. The game was developed with GameMaker 7.","keywords":"retro, nintendo","type":"pc"}' pos="0 0 -2" scale="1.25 1.25 1.25" screen_part_name="screen"/>
 ```
 
+***
+
 ## [presentation](https://github.com/madjin/janus-custom-components/blob/master/media/presentation/presentation.js)
 
 ![Preview](https://i.imgur.com/s55HNSs.jpg)
+
+***
 
 ## [mediaplayer](https://github.com/madjin/janus-custom-components/blob/master/media/mediaplayer/mediaplayer.js)
 
 This component isn't used directly, it's the base class for projector, cassetteplayer, etc. It's a great example of extended components where you write one base class which defines all interaction behavior, then you extend it for the specific uses.
 
+***
 
 ## [projector](https://github.com/madjin/janus-custom-components/blob/master/media/projector/projector.js)
 
@@ -63,6 +71,8 @@ This component isn't used directly, it's the base class for projector, cassettep
 </Object>
 ```
 
+***
+
 ## [recordplayer](https://github.com/madjin/janus-custom-components/blob/master/media/recordplayer/recordplayer.js)
 
 ![Preview](https://i.imgur.com/JSuAJRd.jpg)
@@ -79,6 +89,8 @@ This component isn't used directly, it's the base class for projector, cassettep
 </Object>
 ```
 
+***
+
 ## [search](https://github.com/madjin/janus-custom-components/blob/master/media/search/search.js)
 
 ![Preview](https://i.imgur.com/nv8EUM9.jpg)
@@ -93,6 +105,8 @@ This component isn't used directly, it's the base class for projector, cassettep
 <ArchiveCollection collectionname="georgeblood" itemtype="archive_record" pos="-.2 .95 0" rotation="0 -45 0" />
 <ArchiveCollection collectionname="prelinger" itemtype="archive_film" pos="-.2 .95 0" rotation="0 -45 0" />
 ```
+
+***
 
 ## [stereosystem](https://github.com/madjin/janus-custom-components/blob/master/media/stereosystem/stereosystem.js)
 
@@ -115,6 +129,8 @@ This component isn't used directly, it's the base class for projector, cassettep
 </Object>
 ```
 
+***
+
 ## [videoscreen](https://github.com/madjin/janus-custom-components/blob/master/media/videoscreen/videoscreen.js)
 
 ![Preview](https://i.imgur.com/USa1ELw.jpg)
@@ -127,6 +143,7 @@ This component isn't used directly, it's the base class for projector, cassettep
 <videoscreen col="1 1 1" cull_face="none" id="plane" js_id="mainvideo" lighting="false" pos="0.5 8.3 -21" scale="5.5 1.8 .001" video_id="main4kvid" xdir="0 0 1" zdir="-1 0 0"/>
 ```
 
+***
 
 ## [viewer](https://github.com/madjin/janus-custom-components/blob/master/media/viewer/viewer.js)
 

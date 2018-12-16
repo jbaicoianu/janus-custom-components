@@ -22,6 +22,8 @@
 <ChangeMachine fwd="0 0 1" id="change-machine-high" lighting="true" pos="-1.5071823596954 0.065061643719673 2.5123152732849" up="0 1 0" xcollision_id="change-machine-high_collider" envmap_id="envmap-interior"/>
 ```
 
+***
+
 ## [streetlight](https://github.com/madjin/janus-custom-components/blob/master/tools/streetlight/streetlight.js)
 
 ![Preview](https://i.imgur.com/NMjft9V.jpg)
@@ -40,6 +42,8 @@
     </object>
 ```
 
+***
+
 ## [torch](https://github.com/madjin/janus-custom-components/blob/master/tools/torch/torch.js)
 
 ![Preview](https://i.imgur.com/VqfQmC1g.jpg)
@@ -52,6 +56,8 @@
 <Particle col="#666666" count="500" duration="10" id="1140" image_id="particle" lighting="false" loop="true" pos="-40 0 -40" rand_accel="0.1 0.1 0.1" rand_pos="70 6 70" rand_vel="0.2 0.2 0.2" rate="80" scale="0.02 0.02 0.02" vel="-0.1 -0.1 -0.1"/>
 <Torch pos="0 0 2"/>
 ```
+
+***
 
 ## [vendingmachine](https://github.com/madjin/janus-custom-components/blob/master/tools/vendingmachine/vendingmachine.js)
 
