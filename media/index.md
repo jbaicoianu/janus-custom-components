@@ -16,7 +16,7 @@
 
 ## [msf](https://github.com/madjin/janus-custom-components/blob/master/media/msf/aarcade.js)
 
-![Remix](https://i.imgur.com/hPC9Ati.jpg) [View example](https://vesta.janusvr.com/bai/anarchy-arcade-test)
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/anarchy-arcade-test)
 
 ![Preview](https://i.imgur.com/28iXQJs.jpg)
 
