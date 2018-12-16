@@ -1,5 +1,3 @@
-# Utils
-
 - [Media](https://github.com/madjin/janus-custom-components/blob/master/media/index.md)
 - [Scenery](https://github.com/madjin/janus-custom-components/blob/master/scenery/index.md)
 - [Space](https://github.com/madjin/janus-custom-components/blob/master/space/index.md)
@@ -7,6 +5,9 @@
 - [**Utils**](https://github.com/madjin/janus-custom-components/blob/master/utils/index.md)
 - [Weapons](https://github.com/madjin/janus-custom-components/blob/master/weapons/index.md)
 
+***
+
+# Utils
 
 ## [bulletedlist](https://github.com/madjin/janus-custom-components/blob/master/utils/bulletedlist/bulletedlist.js)
 
@@ -37,6 +38,10 @@
 ```
 
 ## [layout](https://github.com/madjin/janus-custom-components/blob/master/utils/layout/layout.js)
+
+![Preview](https://i.imgur.com/rnQbzlH.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/guide/layout)
 
 The id="" can be a relative or absolute link pointing to the location of an assetobject.
 
@@ -79,6 +84,9 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 
 ## [pushbutton](https://github.com/madjin/janus-custom-components/blob/master/utils/pushbutton/pushbutton.js)
 
+![Preview](https://imgur.com/hxu1GKo.gif)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/guide/streetlight)
 
 ## [showcase](https://github.com/madjin/janus-custom-components/blob/master/utils/showcase/showcase.js)
 
@@ -91,6 +99,10 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 ```
 
 ## [slider](https://github.com/madjin/janus-custom-components/blob/master/utils/slider/slider.js)
+
+![Preview](https://imgur.com/LUFicrn.gif)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/guide/streetlight)
 
 ```
 <Slider max="15" min="0" onchange="room.objects['mylamp'].setBrightness(this.value)" pos=".2 0 .5" value="8"/>
@@ -112,6 +124,8 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 ## [teleporter](https://github.com/madjin/janus-custom-components/blob/master/utils/teleporter/teleporter.js)
 
 ![Preview](https://i.imgur.com/FV4aO4u.gif)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/guide/teleporter)
 
 ```
 <Teleporter col="#4cb96f" external="true" js_id="test" logo_scale="3.3 3 1" pos="-20 1.4 15.1" url="hifi://maker" xdir="0 0 -1" zdir="1 1 0"/>

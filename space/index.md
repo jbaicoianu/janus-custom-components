@@ -1,5 +1,3 @@
-# Space
-
 - [Media](https://github.com/madjin/janus-custom-components/blob/master/media/index.md)
 - [Scenery](https://github.com/madjin/janus-custom-components/blob/master/scenery/index.md)
 - [**Space**](https://github.com/madjin/janus-custom-components/blob/master/space/index.md)
@@ -7,9 +5,16 @@
 - [Utils](https://github.com/madjin/janus-custom-components/blob/master/utils/index.md)
 - [Weapons](https://github.com/madjin/janus-custom-components/blob/master/weapons/index.md)
 
+***
+
+# Space
+
+An experiment using JanusWeb's built-in physics force generators (N-body universal simulation). This also demonstrates some of JanusWeb's positional audio support.
+
 ![Preview](https://i.imgur.com/DzJNeOk.jpg)
 
 [![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/gravity-sim-test)
+
 
 ## [asteroidbelt](https://github.com/madjin/janus-custom-components/blob/master/space/asteroidbelt/asteroidbelt.js)
 
