@@ -19,6 +19,8 @@
 
 ![Preview](https://i.imgur.com/3ouXnJe.jpg)
 
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/forest-test)
+
 ## [tree](https://github.com/madjin/janus-custom-components/blob/master/scenery/tree/tree.js)
 
 ![Preview](https://i.imgur.com/JxIjq0u.jpg)
@@ -32,6 +34,8 @@
 ## [water](https://github.com/madjin/janus-custom-components/blob/master/scenery/water/water.js)
 
 ![Preview](https://i.imgur.com/9fatPKf.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/guide/water)
 
 ```
 <AssetImage id="water" src="https://github.com/mrdoob/three.js/raw/master/examples/textures/waternormals.jpg"/>
