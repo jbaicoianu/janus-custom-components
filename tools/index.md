@@ -24,6 +24,8 @@
 
 ![Preview](https://i.imgur.com/NMjft9V.jpg)
 
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/guide/streetlight)
+
 ```
 <object pos="0 .2 0">
      <Text col="#0000ff" font_scale="false" font_size=".05" pos="-.5 .15 .2" scale="1 1 .2">&lt;pushButton&gt;</Text>
@@ -65,11 +67,23 @@
 <Coin pos="-.92 1.27 1.06"/>
 ```
 
+***
+
+# WIP
+
+These are room scripts that can be easily turned into janus components. One can study the differences when any of these become adapted into a component.
+
 ## [minecraft](https://github.com/madjin/janus-custom-components/blob/master/tools/minecraft/minecraft2.js)
 
 ![Preview](https://i.imgur.com/hQMLPnc.jpg)
 
 [![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/nazrin/minecraft-sandbox)
 
-This is a room script that can be easily turned into a janus component. One can study the differences when it becomes a component.
 
+## [gta](https://github.com/madjin/janus-custom-components/blob/master/tools/gta/gta.js)
+
+Pre-component, drive a car around the city.
+
+## [hackthegibson](https://github.com/madjin/janus-custom-components/blob/master/tools/hackthegibson/hackthegibson.js)
+
+Pre-component example that could become the basis of a fps game.

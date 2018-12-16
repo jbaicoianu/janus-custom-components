@@ -9,12 +9,19 @@
 
 ## [audiosystem](https://github.com/madjin/janus-custom-components/blob/master/media/audiosystem/audiosystem.js)
 
+With audiosystem, you can take an audio source and drop it onto the scene and create connections to a variety of splitters and bandwidth filters, and can separately route the bass, mids, and highs to different physically-positioned speakers around the scene. Click below to watch virtually wiring up a room with audio-reactive lighting.
+
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=2zDDcD0Xwpk" target="_blank"><img src="http://img.youtube.com/vi/2zDDcD0Xwpk/0.jpg" alt="IMAGE ALT TEXT HERE" width="846" height="468" /></a>
+
 
 ## [book](https://github.com/madjin/janus-custom-components/blob/master/media/book/book.js)
 
 
 ## [msf](https://github.com/madjin/janus-custom-components/blob/master/media/msf/aarcade.js)
+
+Regular shortcuts look like app icons, text links, or bookmark buttons. **Meta Shortcut Format** exists to facilitate a minimalistic rich presence for shortcuts, especially when used in 2D or 3D environments. This specification is to help 2D & 3D frontends dynamically generate rich representations of shortcut meta data.
+
+Read more here: <https://github.com/smsithlord/MetaShortcutFormat>
 
 ![Preview](https://i.imgur.com/28iXQJs.jpg)
 
