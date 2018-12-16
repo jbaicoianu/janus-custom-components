@@ -1,7 +1,14 @@
 # Utils
 
+- [Media](https://github.com/madjin/janus-custom-components/blob/master/media/index.md)
+- [Scenery](https://github.com/madjin/janus-custom-components/blob/master/scenery/index.md)
+- [Space](https://github.com/madjin/janus-custom-components/blob/master/space/index.md)
+- [Tools](https://github.com/madjin/janus-custom-components/blob/master/tools/index.md)
+- [**Utils**](https://github.com/madjin/janus-custom-components/blob/master/utils/index.md)
+- [Weapons](https://github.com/madjin/janus-custom-components/blob/master/weapons/index.md)
 
-## bulletedlist
+
+## [bulletedlist](https://github.com/madjin/janus-custom-components/blob/master/utils/bulletedlist/bulletedlist.js)
 
 ```
 <bulletedlist js_id="featurelist" pos="0 1 0">
@@ -10,13 +17,13 @@
 </bulletedlist>
 ```
 
-## impostergroup
+## [impostergroup](https://github.com/madjin/janus-custom-components/blob/master/utils/impostergroup/impostergroup.js)
 
 
-## instancedobject
+## [instancedobject](https://github.com/madjin/janus-custom-components/blob/master/utils/instancedobject/instancedobject.js)
 
 
-## layout
+## [layout](https://github.com/madjin/janus-custom-components/blob/master/utils/layout/layout.js)
 
 The id="" can be a relative or absolute link pointing to the location of an assetobject.
 
@@ -48,32 +55,34 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 </VerticalLayout>
 ```
 
-## objectfader
+## [objectfader](https://github.com/madjin/janus-custom-components/blob/master/utils/objectfader/objectfader.js)
 
 
-## objectpool
+## [objectpool](https://github.com/madjin/janus-custom-components/blob/master/utils/objectpool/objectpool.js)
 
 ```
 <objectpool count="4" objecttype="particle" js_id="explosionfactory" />
 ```
 
-## pushbutton
+## [pushbutton](https://github.com/madjin/janus-custom-components/blob/master/utils/pushbutton/pushbutton.js)
 
 
-## showcase
+## [showcase](https://github.com/madjin/janus-custom-components/blob/master/utils/showcase/showcase.js)
+
 [View Example](https://vesta.janusvr.com/bepis/vrchat-hub)
 
 ```
 <Showcase col="#ef2d5e" id="aframe" link_external="true" logo_url="https://aframe.io/aframe-school/media/img/aframe-logo.png" pos="-5.1 0.1 9.8" thumb_url="http://i.imgur.com/EHlQMRN.png" url="https://networked-aframe.glitch.me/" xdir="-1 0 0" zdir="0 0 -1"/>
 ```
 
-## slider
+## [slider](https://github.com/madjin/janus-custom-components/blob/master/utils/slider/slider.js)
 
 ```
 <Slider max="15" min="0" onchange="room.objects['mylamp'].setBrightness(this.value)" pos=".2 0 .5" value="8"/>
 ```
 
-## speechtext
+## [speechtext](https://github.com/madjin/janus-custom-components/blob/master/utils/speechtext/speechtext.js)
+
 [View Example](https://vesta.janusvr.com/bai/speechtext-test)
 
 ```
@@ -83,7 +92,7 @@ The id="" can be a relative or absolute link pointing to the location of an asse
 <SpeechText pos="0 1 -5"/>
 ```
 
-## teleporter
+## [teleporter](https://github.com/madjin/janus-custom-components/blob/master/utils/teleporter/teleporter.js)
 
 ```
 <Teleporter col="#4cb96f" external="true" js_id="test" logo_scale="3.3 3 1" pos="-20 1.4 15.1" url="hifi://maker" xdir="0 0 -1" zdir="1 1 0"/>

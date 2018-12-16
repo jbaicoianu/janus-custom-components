@@ -1,8 +1,17 @@
 # Tools
 
+- [Media](https://github.com/madjin/janus-custom-components/blob/master/media/index.md)
+- [Scenery](https://github.com/madjin/janus-custom-components/blob/master/scenery/index.md)
+- [Space](https://github.com/madjin/janus-custom-components/blob/master/space/index.md)
+- [**Tools**](https://github.com/madjin/janus-custom-components/blob/master/tools/index.md)
+- [Utils](https://github.com/madjin/janus-custom-components/blob/master/utils/index.md)
+- [Weapons](https://github.com/madjin/janus-custom-components/blob/master/weapons/index.md)
 
-## changemachine
+## [changemachine](https://github.com/madjin/janus-custom-components/blob/master/tools/changemachine/changemachine.js)
+
 [View Example](https://www.metacade.com)
+
+![Preview](https://i.imgur.com/Mdfhf3d.jpg)
 
 ```
 <AssetObject id="change-machine-high" src="http://assets.metacade.com/metacade/change-machine/change-machine.dae.gz"/><AssetObject id="change-machine-high_collider" src="http://assets.metacade.com/metacade/change-machine/change-machine-collider.dae.gz"/>
@@ -11,7 +20,9 @@
 <ChangeMachine fwd="0 0 1" id="change-machine-high" lighting="true" pos="-1.5071823596954 0.065061643719673 2.5123152732849" up="0 1 0" xcollision_id="change-machine-high_collider" envmap_id="envmap-interior"/>
 ```
 
-## streetlight
+## [streetlight](https://github.com/madjin/janus-custom-components/blob/master/tools/streetlight/streetlight.js)
+
+![Preview](https://i.imgur.com/NMjft9V.jpg)
 
 ```
 <object pos="0 .2 0">
@@ -25,8 +36,11 @@
     </object>
 ```
 
-## torch
+## [torch](https://github.com/madjin/janus-custom-components/blob/master/tools/torch/torch.js)
+
 [View Example](https://vesta.janusvr.com/bai/minecraft-torch-test)
+
+![Preview](https://i.imgur.com/VqfQmC1g.jpg)
 
 ```
 <AssetImage id="particle" src="https://vesta.janusvr.com/files/bepis/zelda/kokiri0/yellowparticle.png"/>
@@ -35,8 +49,11 @@
 <Torch pos="0 0 2"/>
 ```
 
-## vendingmachine
+## [vendingmachine](https://github.com/madjin/janus-custom-components/blob/master/tools/vendingmachine/vendingmachine.js)
+
 [View Example](https://vesta.janusvr.com/bai/vending-machine-test)
+
+![Preview](https://i.imgur.com/TOvOwX9.jpg)
 
 ```
 <AssetObject id="machine" src="https://vesta.janusvr.com/files/bai/vendingmachine/vendingmachine.obj"/>
@@ -48,8 +65,11 @@
 <Coin pos="-.92 1.27 1.06"/>
 ```
 
-## minecraft
+## [minecraft](https://github.com/madjin/janus-custom-components/blob/master/tools/minecraft/minecraft2.js)
+
 [View Example](https://vesta.janusvr.com/nazrin/minecraft-sandbox)
+
+![Preview](https://i.imgur.com/hQMLPnc.jpg)
 
 This is a room script that can be easily turned into a janus component. One can study the differences when it becomes a component.
 
