@@ -4,13 +4,13 @@
 
 ![Preview](https://i.imgur.com/DzJNeOk.jpg)
 
-## asteroidbelt
+## [asteroidbelt](https://github.com/madjin/janus-custom-components/blob/master/space/asteroidbelt/asteroidbelt.js)
 
 ```
 <AsteroidBelt beltend="4.787e11" beltstart="3.142e11" count="5000"/>
 ```
 
-## planet
+## [planet](https://github.com/madjin/janus-custom-components/blob/master/space/planet/planet.js)
 
 ```
 <Planet daylength="24" image_id="earth-diffuse" js_id="earth" mass="5.972e24" pos="1.496e11 0 0" radius="6.371e6">
@@ -18,13 +18,13 @@
 </Planet>
 ```
 
-## star
+## [star](https://github.com/madjin/janus-custom-components/blob/master/space/star/star.js)
 
 ```
 <Star col=".99 .83 .25" intensity="8" js_id="sun" mass="1.989e30" radius="6.957e8"/>
 ```
 
-## starsystem
+## [starsystem](https://github.com/madjin/janus-custom-components/blob/master/space/starsystem/starsystem.js)
 
 ```
 <StarSystem js_id="sol" planetscale="1000" pos="0 1.5 14.15" scale="1e-10 1e-10 1e-10" spinscale=".05" starscale="100" timescale="1000000">
