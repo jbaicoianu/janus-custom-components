@@ -7,9 +7,9 @@
 - [Utils](https://github.com/madjin/janus-custom-components/blob/master/utils/index.md)
 - [Weapons](https://github.com/madjin/janus-custom-components/blob/master/weapons/index.md)
 
-[View Example](https://vesta.janusvr.com/bai/gravity-sim-test)
-
 ![Preview](https://i.imgur.com/DzJNeOk.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/gravity-sim-test)
 
 ## [asteroidbelt](https://github.com/madjin/janus-custom-components/blob/master/space/asteroidbelt/asteroidbelt.js)
 

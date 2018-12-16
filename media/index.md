@@ -16,9 +16,9 @@
 
 ## [msf](https://github.com/madjin/janus-custom-components/blob/master/media/msf/aarcade.js)
 
-[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/anarchy-arcade-test)
-
 ![Preview](https://i.imgur.com/28iXQJs.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/anarchy-arcade-test)
 
 ```
 <aacabinet cabinet_id="arcademachine" controlpanel_part_name="cabinet-front" js_id="supersmashland" marquee_part_name="cabinet-marquee" msf='{"title":"SuperSmashLand","file":"SuperSmashLand.exe","screen":"http://www.supersmashland.com/imgs/screenshot1.png","marquee":"https://i.ytimg.com/vi/KVROb_FPZCc/maxresdefault.jpg","preview":"https://www.youtube.com/watch?v=351CO5_8fbM","download":"http://www.supersmashland.com/","reference":"http://en.wikipedia.org/wiki/Super_Smash_Land","description":"Super Smash Land is a demake of Super Smash Bros. released in September 14, 2011 by Dan Fornace. The game features 6 playable characters and 11 stages. The game visual design resembles the graphics from the Nintendo Game Boy. The game was developed with GameMaker 7.","keywords":"retro, nintendo","type":"pc"}' pos="0 0 -2" scale="1.25 1.25 1.25" screen_part_name="screen"/>
@@ -72,9 +72,9 @@ This component isn't used directly, it's the base class for projector, cassettep
 
 ## [search](https://github.com/madjin/janus-custom-components/blob/master/media/search/search.js)
 
-[![View Example](https://i.imgur.com/hPC9Ati.jpg)](http://assets.metacade.com/internetarchive/)
-
 ![Preview](https://i.imgur.com/nv8EUM9.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](http://assets.metacade.com/internetarchive/)
 
 ```
 <AssetObject id="crate" src="http://assets.metacade.com/internetarchive/crate/scene.gltf" />
@@ -108,9 +108,9 @@ This component isn't used directly, it's the base class for projector, cassettep
 
 ## [videoscreen](https://github.com/madjin/janus-custom-components/blob/master/media/videoscreen/videoscreen.js)
 
-[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bepis/cinema)
-
 ![Preview](https://i.imgur.com/USa1ELw.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bepis/cinema)
 
 ```
 <AssetScript src="http://assets.metacade.com/flynns-theater/videoscreen.js"/>

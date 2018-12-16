@@ -9,9 +9,9 @@
 
 ## [changemachine](https://github.com/madjin/janus-custom-components/blob/master/tools/changemachine/changemachine.js)
 
-[View Example](https://www.metacade.com)
-
 ![Preview](https://i.imgur.com/Mdfhf3d.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://www.metacade.com)
 
 ```
 <AssetObject id="change-machine-high" src="http://assets.metacade.com/metacade/change-machine/change-machine.dae.gz"/><AssetObject id="change-machine-high_collider" src="http://assets.metacade.com/metacade/change-machine/change-machine-collider.dae.gz"/>
@@ -38,9 +38,9 @@
 
 ## [torch](https://github.com/madjin/janus-custom-components/blob/master/tools/torch/torch.js)
 
-[View Example](https://vesta.janusvr.com/bai/minecraft-torch-test)
-
 ![Preview](https://i.imgur.com/VqfQmC1g.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/minecraft-torch-test)
 
 ```
 <AssetImage id="particle" src="https://vesta.janusvr.com/files/bepis/zelda/kokiri0/yellowparticle.png"/>
@@ -51,9 +51,9 @@
 
 ## [vendingmachine](https://github.com/madjin/janus-custom-components/blob/master/tools/vendingmachine/vendingmachine.js)
 
-[View Example](https://vesta.janusvr.com/bai/vending-machine-test)
-
 ![Preview](https://i.imgur.com/TOvOwX9.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/bai/vending-machine-test)
 
 ```
 <AssetObject id="machine" src="https://vesta.janusvr.com/files/bai/vendingmachine/vendingmachine.obj"/>
@@ -67,9 +67,9 @@
 
 ## [minecraft](https://github.com/madjin/janus-custom-components/blob/master/tools/minecraft/minecraft2.js)
 
-[View Example](https://vesta.janusvr.com/nazrin/minecraft-sandbox)
-
 ![Preview](https://i.imgur.com/hQMLPnc.jpg)
+
+[![View Example](https://i.imgur.com/hPC9Ati.jpg)](https://vesta.janusvr.com/nazrin/minecraft-sandbox)
 
 This is a room script that can be easily turned into a janus component. One can study the differences when it becomes a component.
 
