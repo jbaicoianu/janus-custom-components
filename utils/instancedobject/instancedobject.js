@@ -83,7 +83,6 @@ room.registerElement('instancedobjectpart', {
           'vec3 transformed = vec3( position + offset );',
         ].join( '\n' )
       );
-      materialShader = shader;
     };
 
     let mesh = new THREE.Mesh(instancedgeo, material);
@@ -101,7 +100,6 @@ room.registerElement('instancedobjectpart', {
           'vec3 transformed = vec3( position + offset );',
         ].join( '\n' )
       );
-      materialShader = shader;
     };
 
     mesh.customDistanceMaterial = new THREE.MeshDistanceMaterial({
@@ -117,7 +115,6 @@ room.registerElement('instancedobjectpart', {
           'vec3 transformed = vec3( position + offset );',
         ].join( '\n' )
       );
-      materialShader = shader;
     };
     this.objects['3d'].add(mesh);
     this.instancedgeo = instancedgeo;
