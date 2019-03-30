@@ -3,7 +3,6 @@ room.registerElement('instancedobject', {
   object: null,
   instances: [],
   create() {
-console.log('DO IT', this.model_id);
     if (this.instances.length == 0) {
       this.instances = this.getElementsByTagName('instance');
     }
@@ -12,8 +11,7 @@ console.log('DO IT', this.model_id);
     } else if (this.model_id) {
       let modelasset = this.getAsset('model', this.model_id);
       if (modelasset) {
-console.log('go go', modelasset.loaded);
-modelasset.load();
+        modelasset.load();
         elation.events.add(modelasset, 'asset_load', () => this.processAsset(modelasset));
       }
     }
@@ -77,7 +75,6 @@ room.registerElement('instancedobjectpart', {
     }
 
     let material = this.mesh.material.clone(); //new THREE.MeshStandardMaterial({color: 0xff0000});
-console.log('object part material', material.map, material, this);
     material.onBeforeCompile = function ( shader ) {
       shader.vertexShader = 'attribute vec3 offset;\n' + shader.vertexShader;
       shader.vertexShader = shader.vertexShader.replace(
@@ -96,9 +93,7 @@ console.log('object part material', material.map, material, this);
       map: material.map,
       alphaTest: 0.5
     });
-mesh.customDepthMaterial.AAAAA = 'BBBBBB';
     mesh.customDepthMaterial.onBeforeCompile = function ( shader ) {
-mesh.customDepthMaterial.AAAAA = 'CCCCCC';
       shader.vertexShader = 'attribute vec3 offset;\n' + shader.vertexShader;
       shader.vertexShader = shader.vertexShader.replace(
         '#include <begin_vertex>',
@@ -106,7 +101,6 @@ mesh.customDepthMaterial.AAAAA = 'CCCCCC';
           'vec3 transformed = vec3( position + offset );',
         ].join( '\n' )
       );
-console.log('customDepth', mesh.customDepthMaterial, shader);
       materialShader = shader;
     };
 
@@ -123,7 +117,6 @@ console.log('customDepth', mesh.customDepthMaterial, shader);
           'vec3 transformed = vec3( position + offset );',
         ].join( '\n' )
       );
-console.log('customDistance', mesh.customDistanceMaterial, shader);
       materialShader = shader;
     };
     this.objects['3d'].add(mesh);
