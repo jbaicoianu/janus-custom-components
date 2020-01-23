@@ -3,22 +3,29 @@ room.registerElement('water', {
   sizey: 1000,
   create() {
     let watertex = this.getAsset('image', 'water');
-    elation.events.add(watertex, 'asset_load', (ev) => {
-      let water = new THREE.Water(new THREE.PlaneBufferGeometry(this.sizex, this.sizey), {
-        textureWidth: 512,
-        textureHeight: 512,
-        waterNormals: watertex.getInstance(),
-        alpha: .9,
-        sunDirection: V(0, 1, 0),
-        sunColor: 0xffffff,
-        waterColor: 0x001e0f,
-        distortionScale: 3.7,
-        fog: room.fog
+    if (watertex.loaded) {
+      this.initWater(watertex);
+    } else {
+      elation.events.add(watertex, 'asset_load', (ev) => {
+        this.initWater(watertex);
       });
-      water.rotation.x = - Math.PI / 2;
-      this.objects['3d'].add(water);
-      this.water = water;
+    }
+  },
+  initWater(watertex) {
+    let water = new THREE.Water(new THREE.PlaneBufferGeometry(this.sizex, this.sizey), {
+      textureWidth: 512,
+      textureHeight: 512,
+      waterNormals: watertex.getInstance(),
+      alpha: .9,
+      sunDirection: V(0, 1, 0),
+      sunColor: 0xffffff,
+      waterColor: 0x001e0f,
+      distortionScale: 3.7,
+      fog: room.fog
     });
+    water.rotation.x = - Math.PI / 2;
+    this.objects['3d'].add(water);
+    this.water = water;
   },
   update(dt) {
     if (this.water) {
