@@ -4,7 +4,7 @@ room.registerElement('water', {
   create() {
     let watertex = this.getAsset('image', 'water');
     if (watertex.loaded) {
-      this.initWater(watertex);
+      setTimeout(() => this.initWater(watertex), 0);
     } else {
       elation.events.add(watertex, 'asset_load', (ev) => {
         this.initWater(watertex);
@@ -27,6 +27,9 @@ room.registerElement('water', {
     this.objects['3d'].add(water);
     this.water = water;
   },
+  assignTextures() {
+    // Override default object texture handling
+  }
   update(dt) {
     if (this.water) {
       this.water.material.uniforms.time.value += dt / 10;
