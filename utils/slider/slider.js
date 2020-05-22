@@ -41,6 +41,7 @@ room.registerElement('slider', {
 
     this.handle.addEventListener('mousedown', this.onMouseDown);
     this.track.addEventListener('mousedown', this.onMouseDown);
+    this.addEventListener('wheel', this.onMouseWheel);
     // FIXME - bind these in mousedown, for maximum efficiency
     window.addEventListener('mouseup', this.onMouseUp);
     window.addEventListener('touchend', this.onMouseUp);
@@ -107,6 +108,10 @@ room.registerElement('slider', {
       this.dispatchEvent({type: 'end'});
       ev.stopPropagation();
     }
+  },
+  onMouseWheel: function(ev) {
+    let movescale = (this.max - this.min) / (ev.shiftKey ? 100 : 25);
+    this.setValue(this.value + (ev.deltaY < 0 ? movescale : -movescale));
   },
   onClick: function(ev) {
   }
