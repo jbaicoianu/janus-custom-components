@@ -332,14 +332,14 @@ THREE.Water = function ( geometry, options ) {
 
 		}
 
-		if ( renderer.toneMapping !== THREE.NoToneMapping ) {
+		/*if ( renderer.toneMapping !== THREE.NoToneMapping ) {
 
 			console.warn( 'THREE.Water: WebGLRenderer must use NoToneMapping as toneMapping.' );
 			scope.onBeforeRender = function () {};
 
 			return;
 
-		}
+		}*/
 
 		var currentRenderTarget = renderer.getRenderTarget();
 
