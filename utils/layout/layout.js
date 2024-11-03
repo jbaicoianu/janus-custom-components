@@ -24,16 +24,19 @@ room.extendElement('layout', 'horizontallayout', {
     }
   },
 });
-room.extendElement('layout', 'verticallayout', {
-  offset: V(0,1,0),
+room.registerElement('verticallayout', {
+  offset: V(0,0,0),
   spacing: 1,
-  // FIXME - need proxy inheritance so we don't need to duplicate this function
   create: function() {
-    var children = this.children;
-    console.log('children!', children);
-    var i = 0;
+    this.reflow();
+  },
+  reflow() {
+    let children = this.children;
+    let posy = 0;
     for (var k in children) {
-      children[k].pos = scalarMultiply(this.offset, i++ * this.spacing);        
+      children[k].pos.y = posy;
+      let bbox = children[k].getBoundingBox();
+      posy -= (bbox.max.y - bbox.min.y) + this.offset.y;
     }
   },
 });
@@ -52,4 +55,4 @@ room.extendElement('layout', 'circularlayout', {
 
   }
 });
-
+//room.extendElement(
