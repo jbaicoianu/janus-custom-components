@@ -20,7 +20,7 @@ room.registerElement('pushbutton', {
     this.button = room.createObject('Object', {
       id: 'cube',
       collision_id: 'cube',
-      col: this.col,
+      col: this.col.clone(),
       scale: V(this.length * .8, this.height / 4, this.width * .8),
     }, this);
     this.sounds = {
