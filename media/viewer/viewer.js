@@ -98,13 +98,14 @@ room.registerElement('viewer', {
     return holding_left || holding_right;
   },
   mousemove(ev) {
-    /*
+return;
     if (this.holding) {
-      tmpvec.copy(player.cursor_pos);
-      this.holding.pos = this.holding.parent.worldToLocal(tmpvec);
+      tmpvec.copy(ev.data.point);
+      let dist = tmpvec.length();
+console.log(tmpvec, dist, this.holding.parent);
+      this.holding.pos = this.holding.parent.worldToLocal(this.localToWorld(tmpvec.normalize()));
       this.holding.ydir = ev.data.face.normal;
     }
-    */
   },
   update() {
     /*
@@ -188,6 +189,26 @@ room.registerElement('viewer', {
     this.hand_right.col = rightcol;
     this.hand_right.setOpacity(.2);
     */
+    player.head.localToWorld(this.pos.set(0,0,0));
+    if (this.holding) {
+      let hits = player.raycast();
+      if (hits.length > 0) {
+        let hit = hits[0];
+        tmpvec.copy(hit.point);
+        let dist = player.head.distanceTo(tmpvec);
+        if (dist < 1.5) {
+    //console.log(tmpvec, dist, this.holding.parent);
+          this.holding.pos = this.holding.parent.worldToLocal(tmpvec);
+          //this.holding.ydir = hit.face.normal;
+          this.holding.ydir.set(0,1,0);
+          this.holding.zdir = player.localToWorld(V(0,0,1)).sub(player.localToWorld(V(0)));
+        } else {
+          this.holding.pos = this.holding.parent.worldToLocal(player.head.localToWorld(tmpvec.set(0,-.1,-.2)));
+          this.holding.ydir.set(0,1,0);
+          this.holding.zdir = player.localToWorld(V(0,0,1)).sub(player.localToWorld(V(0)));
+        }
+      }
+    }
   },
   handleHandCollision(ev) {
     let obj = ev.data;
@@ -442,7 +463,6 @@ room.registerElement('viewer_hand', {
       this.holding = obj;
 
       this.updateMediaplayerPlaceholders();
-      console.log('BLUBLUB', obj);
       obj.dispatchEvent({type: 'grabstart', data: {hand: this.hand, object: this.holding}});
     }
   },

@@ -6,8 +6,10 @@ room.registerElement('mediaplayer', {
   mediatype: null,
   bodyid: null,
   modelscale: "1 1 1",
-  placeholdercolor_unselected: "1 1 .4 .5",
-  placeholdercolor_selected: ".4 1 .4 .5",
+  placeholdercolor_unselected: "1 1 .4 .9",
+  placeholdercolor_selected: ".4 1 .4 .9",
+  onmediaadd: new CustomEvent('mediaadd'),
+  onmediaremove: new CustomEvent('mediaremove'),
 
   create() {
     this.body = this.createBody();
@@ -35,9 +37,9 @@ room.registerElement('mediaplayer', {
   },
   showPlaceholder(selected) {
     this.placeholder.visible = true;
-    this.placeholder.setOpacity(.3);
+    //this.placeholder.setOpacity(.3);
     this.placeholder.col = (selected ? this.placeholdercolor_selected : this.placeholdercolor_unselected);
-    //console.log('show placeholder', selected, this.placeholder.col, this);
+    console.log('show placeholder', selected, this.placeholder.col, this);
   },
   hidePlaceholder() {
     this.placeholder.visible = false;
@@ -55,7 +57,7 @@ room.registerElement('mediaplayer', {
         }
 
         if (!this.placeholder.visible) {
-          this.showPlaceholder();
+          this.showPlaceholder(true);
         }
         if (this.media) {
           //this.media.disableCollider();
@@ -105,7 +107,8 @@ room.registerElement('mediaplayer', {
       if (media && media != this.media) {
         viewer.drop();
         this.hidePlaceholder();
-        //this.play(media);
+        this.play(media);
+        this.dispatchEvent({type: 'mediaadd', data: {media: media, player: this}});
       }
     }
   },
@@ -136,6 +139,7 @@ room.registerElement('mediaplayer', {
   stop() {
     if (this.media) {
       this.media.stop();
+      this.dispatchEvent({type: 'mediaremove'});
     }
   }
 });
@@ -155,7 +159,7 @@ room.registerElement('playablemedia', {
     if (this.mediatype) {
       this.addTag(this.mediatype);
     }
-    this.addEventListener('click', this.handleClick);
+    this.thing.addEventListener('click', this.handleClick);
     this.addEventListener('grabstart', this.handleGrabStart);
     this.addEventListener('grabend', this.handleGrabEnd);
     this.spawnpos = V(this.pos);
@@ -175,17 +179,25 @@ room.registerElement('playablemedia', {
     //this.reset();
   },
   disableCollider() {
+/*
     if (this.thing.collision_id) {
       console.log('disable collider', this);
       this.originalcollider = this.thing.collision_id;
       this.thing.collision_id = '';
     }
+*/
+    this.thing.collidable = false;
+    this.thing.pickable = false;
   },
   enableCollider() {
+/*
     if (this.originalcollider && this.thing.collision_id != this.originalcollider) {
       console.log('enable collider', this.thing.collision_id, this.originalcollider, this);
       this.thing.collision_id = this.originalcollider;
     }
+*/
+    this.thing.collidable = true;
+    this.thing.pickable = true;
   },
   reset() {
     let worldpos = this.localToWorld(V(0,0,0));
