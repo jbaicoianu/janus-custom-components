@@ -74,6 +74,21 @@ room.registerElement('objectpool', {
     obj.col = V(1, 0, 1);
     this.objectpool.push(obj);
     return obj;
+  },
+  find: function(params) {
+    let compare = (item) => {
+      for (let k in params) {
+        if (item[k] !== params[k]) return false;
+      }
+      return true;
+    }
+    for (let i = 0; i < this.pending.length; i++) {
+      if (compare(this.pending[i])) return this.pending[i];
+    }
+    for (let i = 0; i < this.free.length; i++) {
+      if (compare(this.free[i])) return this.free[i];
+    }
+    return undefined;
   }
 });
 
