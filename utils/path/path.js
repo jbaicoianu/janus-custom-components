@@ -321,6 +321,7 @@ room.registerElement('scrollpath', {
       n = 1;
       if (this.loop) {
         this.startPath();
+        return;
       } else {
         this.stopPath();
       } 
@@ -348,7 +349,8 @@ room.registerElement('scrollpath', {
           target.properties.orientation.setFromEuler(new THREE.Euler(0, Math.atan2(lookdir.x, lookdir.z), 0));
           target.head.properties.orientation.setFromEuler(new THREE.Euler(-Math.asin(lookdir.y), 0, 0));
 */
-          target.lookAt(lookatpos);
+          //target.lookAt(lookatpos);
+          target.zdir = targetpos.clone().sub(lookatpos).normalize();
         }
       } else {
         console.warn('WARNING - no path target', this);
