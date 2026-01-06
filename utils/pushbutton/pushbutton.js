@@ -6,8 +6,8 @@ room.registerElement('pushbutton', {
   state:        'off',
   accesskey:    false,
 
-  onactivate:   false,
-  ondeactivate: false,
+  onactivate:   new CustomEvent('activate'),
+  ondeactivate: new CustomEvent('deactivate'),
 
   create: function() {
     this.base = room.createObject('Object', {
