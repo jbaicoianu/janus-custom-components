@@ -23,7 +23,7 @@ room.registerElement('objectpool', {
     }
   },
 
-  grab: function(args) {
+  grab: function(args={}) {
     var obj = false;
     if (this.free.length > 0) {
       if (args.id) {
