@@ -4,7 +4,9 @@ room.registerElement('vehicle-car', {
   track: 1.65,
   maxsteer: 30,
   model_id: '',
+  model_pos: V(),
   model_rotation: V(),
+  model_scale: V(1),
   seat_pos: V(-.4, .65, 0),
   owner: '',
 
@@ -20,13 +22,25 @@ room.registerElement('vehicle-car', {
   rearCornerStiffness: 15000,
 
   create() {
-    this.mass = 1000;
+    if (this.mass == 0) {
+      // Reasonable default mass
+      this.mass = 1000;
+    }
+
+/*
+    this.collision_id = 'capsule';
+    this.collision_rotation = V(90, 0, 0);
+    this.collision_scale = V(2, 2, 4);
+*/
+
 
     if (this.model_id) {
       this.chassis = this.createObject('object', {
         id: this.model_id,
         rotation: this.model_rotation,
         //pos: V(0, .35 + .746/2, 0),
+        pos: this.model_pos,
+        scale: this.model_scale,
         //xcollision_id: 'cube'
       });
     } else {
@@ -50,11 +64,13 @@ room.registerElement('vehicle-car', {
         rotation: V(15, 0, 0)
       });
     }
-
-    this.collision_scale = V(1.85, 0.7, 4.5);
-    this.collision_pos = this.chassis.pos;
+    let bbox = this.chassis.getBoundingBox();
+    let size = bbox.max.clone().sub(bbox.min);
+    this.collision_scale = V(this.track, 0.7, this.wheelbase * 1.2);
+    this.collision_pos.add(this.chassis.pos);
     this.collision_id = 'cube';
     this.collidable = false;
+
 
     this.addEventListener('collide', ev => { console.log(ev) });
 
@@ -80,18 +96,12 @@ room.registerElement('vehicle-car', {
     this.addEventListener('click', ev => this.handleClick(ev));
 
     this.state = this.addControlContext('vehicle-car', {
-      accelerate:  { defaultbindings: 'keyboard_w,gamepad_any_button_14' },
+      accelerate:  { defaultbindings: 'keyboard_w,gamepad_any_axis_1,gamepad_any_button_14' },
       reverse:     { defaultbindings: 'keyboard_s' },
       steer_left:  { defaultbindings: 'keyboard_a' },
       steer_right: { defaultbindings: 'keyboard_d,gamepad_any_axis_0' },
       brake:       { defaultbindings: 'keyboard_space,gamepad_any_button_15' },
-      enter:       { defaultbindings: 'keyboard_enter,gamepad_any_button_2', onactivate: ev => {
-        if (this.driving) {
-          this.deactivate();
-        } else if (this.distanceTo(player) < 2) {
-          this.activate();
-        }
-      } },
+      enter:       { defaultbindings: 'keyboard_enter,gamepad_any_button_2', ondeactivate: this.enterExitVehicle },
     });
 
     this.objects.dynamics.setDamping(.4, .01);
@@ -99,6 +109,14 @@ room.registerElement('vehicle-car', {
     // Engine force (still applied at COM; you can later distribute to driven wheels)
     this.engineforcevec = V();
     this.engineforce = this.addForce('static', { relative: true, force: this.engineforcevec });
+
+    this.engineforcevis = this.createObject('linesegments', {
+      pos: V(0,0.5,-2),
+      positions: [V(0,0,0), this.engineforcevec],
+      col: 'purple',
+      depth_test: false,
+      renderorder: 20
+    });
 
     this.gravityforce = this.addForce('static', { force: V(0, -9.8 * this.mass, 0) });
 
@@ -114,17 +132,23 @@ room.registerElement('vehicle-car', {
   },
 
   activate() {
+    console.log('activate car', this);
+    player.collidable = false;
     this.seat.sit();
     this.activateControlContext('vehicle-car');
-    this.pos.x = 0;
+    //this.pos.x = 0;
     this.vel.x = 0;
-    this.driving = true;;
+    this.driving = true;
   },
   deactivate() {
+    console.log('deactivate car', this);
     this.driving = false;
+    this.state._reset();
     this.deactivateControlContext('vehicle-car');
     this.seat.stand();
-    player.pos = this.localToWorld(V(-1, 0, 0));
+    this.engineforce.update(this.engineforcevec.set(0, 0, 0));
+    player.pos = this.localToWorld(V(-1, .4, 0));
+    player.collidable = true;
   },
 
   handleClick() {
@@ -135,7 +159,11 @@ room.registerElement('vehicle-car', {
     return function(dt) {
       // Throttle (simple)
       const throttle = (-this.state.accelerate + this.state.reverse);
+      // FIXME - handling engine force like this means you can control your forward or reverse speed mid-air.
+      //         Acceleration force should be calculated at each tire, based on contact force and tire grip.
+      //         This probably also means simulating things like slip differential, FWD vs RWD vs AWD, etc.
       this.engineforce.update(this.engineforcevec.set(0, 0, throttle * this.enginestrength));
+      this.engineforcevis.updateLine();
 
       // Steering input -> smoothed steerAngle
       const steerInput = (this.state.steer_right || 0) - (this.state.steer_left || 0);
@@ -159,10 +187,16 @@ room.registerElement('vehicle-car', {
       // for now you can keep it as extra damping if desired.
       if (this.driving) {
         this.sync = true;
-    console.log('sync', this.js_id, this.pos);
       }
     };
   })(),
+  enterExitVehicle(ev) {
+    if (this.driving) {
+      this.deactivate();
+    } else if (this.distanceTo(player) < 2) {
+      this.activate();
+    }
+  }
 });
 
 
@@ -367,27 +401,29 @@ room.registerElement('vehicle-spawner', {
   vehicleconfig: '',
 
   create() {
-    this.text = this.createObject('text', { text: 'Click to Drive', pos: V(0, 1, 0), font_scale: false, });
-    this.button = this.createObject('pushbutton', { onactivate: ev => this.handleClick(ev), col: 'red', });
+    this.button = this.createObject('pushbutton', { onactivate: ev => this.handleClick(ev), col: 'green', });
   },
   handleClick(ev) {
-console.log('ahhjj');
     if (!this.vehicle) {
       let username = player.getNetworkUsername();
       let vehiclecfg = {
         owner: username,
-        js_id: 'vehicle-' + username,
+        js_id: 'vehicle-' + username + '-' + Math.floor(Math.random() * 10000000),
         sync: true,
         rotation: this.rotation,
-        pos: this.localToWorld(V(-2, 0, 0)),
+        pos: this.localToWorld(V(0, 0, 0)),
       };
       if (this.vehicleconfig) {
         let json = JSON.parse(this.vehicleconfig);
         elation.utils.merge(json, vehiclecfg);
       }
 
-      this.vehicle = room.createObject('vehicle-car', vehiclecfg);
-console.log('go vehicle', vehiclecfg, this.vehicleconfig, this.vehicle.js_id, this.vehicle);
+      setTimeout(() => {
+        this.vehicle = room.createObject('vehicle-car', vehiclecfg);
+        console.log('spawned vehicle', vehiclecfg, this.vehicleconfig, this.vehicle.js_id, this.vehicle);
+        this.visible = false;
+        this.pos.y = -1000;
+      }, 100);
     }
   }
 });
