@@ -61,7 +61,7 @@ room.registerElement('fpscounter', {
       ctx.fillText(fps + 'fps', 0, height - 4);
       ctx.fillStyle = '1px solid black';
       ctx.strokeText(fps + 'fps', 0, height - 4);
-      elation.events.fire({type: 'update', element: canvas});
+      elation.events.fire({type: 'asset_update', element: canvas});
       this.refresh();
     }
   },
