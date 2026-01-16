@@ -21,6 +21,8 @@ room.registerElement('vehicle-car', {
   frontCornerStiffness: 10000,
   rearCornerStiffness: 15000,
 
+  configurl: '',
+
   create() {
     if (this.mass == 0) {
       // Reasonable default mass
@@ -32,8 +34,25 @@ room.registerElement('vehicle-car', {
     this.collision_rotation = V(90, 0, 0);
     this.collision_scale = V(2, 2, 4);
 */
+    if (this.configurl) {
+      fetch(this.configurl)
+        .then(r => r.json())
+        .then(j => this.loadConfig(j))
+        .then(() => this.initVehicle())
+    } else {
+      this.initVehicle();
+    }
+  },
 
+  async loadConfig(data) {
+    if (data) {
+      for (let k in data) {
+        this[k] = data[k];
+      }
+    }
+  },
 
+  initVehicle() {
     if (this.model_id) {
       this.chassis = this.createObject('object', {
         id: this.model_id,
@@ -413,9 +432,15 @@ room.registerElement('vehicle-spawner', {
         rotation: this.rotation,
         pos: this.localToWorld(V(0, 0, 0)),
       };
+
       if (this.vehicleconfig) {
-        let json = JSON.parse(this.vehicleconfig);
-        elation.utils.merge(json, vehiclecfg);
+        // vehicleconfig can be either a JSON string or a URL to a JSON file
+        if (this.vehicleconfig[0] == '{') {
+          let json = JSON.parse(this.vehicleconfig);
+          elation.utils.merge(json, vehiclecfg);
+        } else {
+          vehiclecfg.configurl = this.vehicleconfig;
+        }
       }
 
       setTimeout(() => {
